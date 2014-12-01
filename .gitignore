@@ -1,11 +1,12 @@
-Temp/
-Library/
-obj/
 *.svd
 *.sln
 *.userprefs
 *.csproj
 *.pidb
+Temp/
+Library/
+obj/
+
 
 !Library/*.asset
 !Library/AssetImportState
