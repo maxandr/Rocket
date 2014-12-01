@@ -5,14 +5,14 @@ public class RocketBehavior : MonoBehaviour
 {
 		public int forcex;
 		public int forcey;
-		public Transform COM;
+		//public Transform COM;
 		// Use this for initialization
 		void Start ()
 		{
 				Debug.Log ("1");
 				int a = 5;
 				//rigidbody2D.centerOfMass = new Vector3 (-1000, -1000, 0);
-				rigidbody2D.centerOfMass = COM.localPosition;
+			//	rigidbody2D.centerOfMass = COM.localPosition;
 
 		}
 	
