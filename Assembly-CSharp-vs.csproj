@@ -46,7 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ObstaclesCrash.cs" />
      <Compile Include="Assets\Scripts\RocketBehavior.cs" />
+     <Compile Include="Assets\Scripts\RocketLauncher.cs" />
+     <Compile Include="Assets\Scripts\TargetManagercs.cs" />
+     <Compile Include="Assets\Scripts\Wind.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
