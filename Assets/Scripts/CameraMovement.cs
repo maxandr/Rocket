@@ -12,7 +12,9 @@ public class CameraMovement : MonoBehaviour
 		public float maxPosY = 10;
 		public float dist;
 
-// mainloop
+		void Start ()
+		{
+		}
 		void Update ()
 		{
 				Ray ray1 = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -23,7 +25,7 @@ public class CameraMovement : MonoBehaviour
 						if (touch.phase == TouchPhase.Began && Input.touches.Length == 1) {
 								Vector2 worldPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 								RaycastHit2D hit = Physics2D.Raycast (worldPoint, Vector2.zero);
-								if (hit.collider == null) {
+								if (hit.collider == null || hit.collider.tag != "Player" ) {
 										startpoint = ray1.GetPoint (10); // Returns a point at distance units along the ray
 										startpoint.z = -10; // fix z to 0
 										panning = true;
@@ -53,7 +55,7 @@ public class CameraMovement : MonoBehaviour
 						if (Input.GetMouseButtonDown (0)) {
 								Vector2 worldPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 								RaycastHit2D hit = Physics2D.Raycast (worldPoint, Vector2.zero);
-								if (hit.collider == null) {
+								if (hit.collider == null || hit.collider.tag != "Player" ) {
 										startpoint = ray1.GetPoint (10); 
 										startpoint.z = -10;
 										panning = true;
