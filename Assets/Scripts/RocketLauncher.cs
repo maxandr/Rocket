@@ -3,17 +3,16 @@ using System.Collections;
 
 public class RocketLauncher : MonoBehaviour
 {
-		BoxCollider2D box;
 		bool startLaunch = false;
 		// Use this for initialization
 		void Start ()
 		{
-				box = gameObject.GetComponent<BoxCollider2D> ();
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
+#if !UNITY_EDITOR
 				foreach (Touch touch in Input.touches) {
 						if (touch.phase == TouchPhase.Began && Input.touches.Length == 1) {
 								Vector2 worldPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -35,6 +34,7 @@ public class RocketLauncher : MonoBehaviour
 								startLaunch = false;
 						}
 				}
+#else
 				if (Input.GetMouseButtonDown (0)) {
 						Vector2 worldPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 						RaycastHit2D hit = Physics2D.Raycast (worldPoint, Vector2.zero);
@@ -56,12 +56,13 @@ public class RocketLauncher : MonoBehaviour
 				}
 				if (startLaunch) {
 						Vector3 worldPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-						Vector3 dest = 2*transform.position - worldPoint;
-			DrawLine (transform.position, dest);
+						Vector3 dest = 2 * transform.position - worldPoint;
+						DrawLine (transform.position, dest);
 						Debug.Log (dest);
 
 						//DrawLine (worldPoint, transform.position);
 				}
+#endif
 		}
 
 		void DrawLine (Vector2 a, Vector2 b)

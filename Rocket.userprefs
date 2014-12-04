@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RocketLauncher.cs">
     <Files>
-      <File FileName="Assets\Scripts\RocketBehavior.cs" Line="56" Column="1" />
-      <File FileName="Assets\Scripts\TargetManagercs.cs" Line="24" Column="27" />
-      <File FileName="Assets\Scripts\RocketLauncher.cs" Line="60" Column="38" />
-      <File FileName="Assets\Scripts\Wind.cs" Line="14" Column="15" />
+      <File FileName="Assets\Scripts\RocketLauncher.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
