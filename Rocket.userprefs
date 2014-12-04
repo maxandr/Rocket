@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\RocketLauncher.cs" Line="15" Column="15" />
-      <File FileName="Assets\Scripts\CameraMovement.cs" Line="56" Column="16" />
+      <File FileName="Assets\Scripts\RocketLauncher.cs" Line="22" Column="46" />
+      <File FileName="Assets\Scripts\CameraMovement.cs" Line="20" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
