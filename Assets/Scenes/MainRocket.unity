@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b62991893dafbc439ff3a40ef56e527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forcex: .5
+  forcex: 0
   forcey: .800000012
   start: 0
 --- !u!61 &317489841
