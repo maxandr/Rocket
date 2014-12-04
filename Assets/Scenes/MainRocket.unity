@@ -366,6 +366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1879b197d738c554295e543ba303f5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WindForceX: .100000001
+  WindForceY: .100000001
+  tText: {fileID: 1841282650}
 --- !u!114 &317489843
 MonoBehaviour:
   m_ObjectHideFlags: 0
