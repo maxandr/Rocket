@@ -48,17 +48,17 @@ public class RocketLauncher : MonoBehaviour
 				if (Input.GetMouseButtonUp (0)) {
 						if (startLaunch) {
 								Vector3 worldPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-								Vector3 dest = transform.position - worldPoint;
-								GetComponent<RocketBehavior> ().forcex = dest.x * 1.0f / 3.6f;
-								GetComponent<RocketBehavior> ().forcey = dest.y * 0.8f / 2.9f;
+								Vector3 dest = worldPoint - transform.position;
+								GetComponent<RocketBehavior> ().forcex = dest.x;// * 1.0f / 3.6f;
+								GetComponent<RocketBehavior> ().forcey = dest.y;// * 0.8f / 2.9f;
 								GetComponent<RocketBehavior> ().WTF ();
 						}
 						startLaunch = false;
 				}
 				if (startLaunch) {
 						Vector3 worldPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-						Vector3 dest = 2 * transform.position - worldPoint;
-						DrawLine (transform.position, dest);
+						Vector3 dest = worldPoint- transform.position  ;
+						DrawLine (transform.position, worldPoint);
 						Debug.Log (dest);
 
 						//DrawLine (worldPoint, transform.position);
@@ -68,6 +68,8 @@ public class RocketLauncher : MonoBehaviour
 
 		void DrawLine (Vector2 a, Vector2 b)
 		{
+				Debug.Log ("a:" + a);
+				Debug.Log ("b:" + b);
 				Debug.DrawLine (a, b);
 		
 		}

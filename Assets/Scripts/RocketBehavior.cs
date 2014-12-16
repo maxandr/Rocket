@@ -6,6 +6,7 @@ public class RocketBehavior : MonoBehaviour
 		public float forcex;
 		public float forcey;
 		public bool start = false;
+		private bool pushed = false;
 		//public Transform COM;
 		// Use this for initialization
 		void Start ()
@@ -20,6 +21,14 @@ public class RocketBehavior : MonoBehaviour
 		void FixedUpdate ()
 		{
 				if (start) {
+						if (transform.position.y <= forcey && !pushed) {
+								rigidbody2D.AddForce (new Vector2 (forcex, forcey), ForceMode2D.Force);
+								
+						} else {
+								pushed = true;
+								GameObject TM = GameObject.Find ("flame");
+								TM.renderer.enabled = false;
+						}
 						Vector2 qwe = rigidbody2D.velocity;
 						if (qwe.x > 0) {
 								transform.rotation = Quaternion.Euler (0.0f, 0.0f, 57.2957795f * Mathf.Atan (qwe.y / qwe.x));
@@ -38,7 +47,6 @@ public class RocketBehavior : MonoBehaviour
 		public void WTF ()
 		{
 				rigidbody2D.isKinematic = false;
-				rigidbody2D.AddForce (new Vector2 (forcex, forcey), ForceMode2D.Impulse);
 				start = true;
 		}
 
