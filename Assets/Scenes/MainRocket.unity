@@ -2116,13 +2116,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269ce65c385a4ff46a69e4cea2b30bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPosX: -9
-  maxPosX: 9
+  minPosX: -11.25
+  maxPosX: 11.25
   minPosY: -1.39999998
-  maxPosY: 24.2000008
+  maxPosY: 30.6000004
   dist: 0
   MINZOOM: 3.20000005
-  MAXZOOM: 12.8000002
+  MAXZOOM: 16
 --- !u!1 &1511367407
 GameObject:
   m_ObjectHideFlags: 0
