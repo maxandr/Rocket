@@ -2117,10 +2117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269ce65c385a4ff46a69e4cea2b30bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPosX: -5
-  maxPosX: 5
-  minPosY: 5
-  maxPosY: 15
+  minPosX: -9
+  maxPosX: 9
+  minPosY: -1.39999998
+  maxPosY: 24.2000008
   dist: 0
 --- !u!114 &1474555350
 MonoBehaviour:
@@ -2471,7 +2471,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:

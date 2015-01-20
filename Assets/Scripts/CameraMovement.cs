@@ -81,11 +81,13 @@ public class CameraMovement : MonoBehaviour
 			
 						if (dist >= 0.1) {
 								transform.position += startpoint - endpoint;
-								/*Vector3 tNewPos;
-								tNewPos.x = Mathf.Clamp (transform.position.x, minPosX, maxPosX);
-								tNewPos.y = Mathf.Clamp (transform.position.y, minPosY, maxPosY);
+								Vector3 tNewPos;
+
+								tNewPos.x = Mathf.Clamp (transform.position.x, minPosX+camera.orthographicSize*camera.pixelWidth/camera.pixelHeight, 
+				                         maxPosX-camera.orthographicSize*camera.pixelWidth/camera.pixelHeight);
+								tNewPos.y = Mathf.Clamp (transform.position.y, minPosY+camera.orthographicSize, maxPosY-camera.orthographicSize);
 								tNewPos.z = -10;
-								transform.position = tNewPos;*/
+								transform.position = tNewPos;
 						}
 				}
 		
