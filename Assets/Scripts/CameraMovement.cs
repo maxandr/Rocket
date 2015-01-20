@@ -67,6 +67,9 @@ public class CameraMovement : MonoBehaviour
 								endpoint.z = -10;
 								transform.position += startpoint - endpoint;//конечная средняя точка
 								CameraBorder();
+								ray11 = Camera.main.ScreenPointToRay ((touch1.position + touch2.position) / 2.0f);
+								startpoint = ray11.GetPoint (100);
+								startpoint.z = -10;//начальная средняя точка cброс
 						}
 				} else {
 						bool pTrue = false;
@@ -94,7 +97,20 @@ public class CameraMovement : MonoBehaviour
 
 				//camera move
 				Ray ray1 = Camera.main.ScreenPointToRay (Input.mousePosition);
-				Ray ray2 = Camera.main.ScreenPointToRay (Input.mousePosition);
+				
+				if (panning) {
+					dist = Mathf.Clamp ((Vector3.Distance (endpoint, startpoint)), 0.0f, 1.0f);
+					endpoint = ray1.GetPoint (10); 
+					endpoint.z = -10; 
+					
+					if (dist >= 0.1) {
+						transform.position += startpoint - endpoint;
+						CameraBorder();
+						Ray ray2 = Camera.main.ScreenPointToRay (Input.mousePosition);
+						startpoint = ray2.GetPoint (10); 
+						startpoint.z = -10;
+					}						
+				}
 				if (Input.GetMouseButtonDown (0)) {
 						Vector2 worldPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 						RaycastHit2D hit = Physics2D.Raycast (worldPoint, Vector2.zero);
@@ -105,17 +121,7 @@ public class CameraMovement : MonoBehaviour
 						} else {
 								return;
 						}
-				}
-				if (panning) {
-						dist = Mathf.Clamp ((Vector3.Distance (endpoint, startpoint)), 0.0f, 1.0f);
-						endpoint = ray2.GetPoint (10); 
-						endpoint.z = -10; 
-			
-						if (dist >= 0.1) {
-								transform.position += startpoint - endpoint;
-								CameraBorder();
-						}
-				}
+				}				
 				if (Input.GetMouseButtonUp (0)) {
 						panning = false;
 				}
