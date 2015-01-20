@@ -3,11 +3,11 @@ using System.Collections;
 
 public class Light : MonoBehaviour {
 	public GameObject lightScaler ;
-	public GameObject light ;
+	public GameObject light2 ;
 	BoxCollider2D boxCollider2D;
 	// Use this for initialization
 	void Start () {
-		boxCollider2D = light.GetComponent<BoxCollider2D>();
+		boxCollider2D = light2.GetComponent<BoxCollider2D>();
 	}
 	
 	// Update is called once per frame

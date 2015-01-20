@@ -49,7 +49,6 @@
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Light.cs" />
      <Compile Include="Assets\Scripts\ObstaclesCrash.cs" />
-     <Compile Include="Assets\Scripts\PinchZoom.cs" />
      <Compile Include="Assets\Scripts\RocketBehavior.cs" />
      <Compile Include="Assets\Scripts\RocketLauncher.cs" />
      <Compile Include="Assets\Scripts\TargetManagercs.cs" />
